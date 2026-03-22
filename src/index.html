@@ -69,6 +69,44 @@
 
 </div>
 
+<div class="p-10">
+    <h1 class="font-normal font-inter uppercase text-5xl text-black">Latest Deals</h1>
+
+
+    <div id="product-slider" 
+         class="flex flex-nowrap gap-8 overflow-x-auto pb-8 pt-5
+                [scrollbar-width:thin] 
+                [&::-webkit-scrollbar]:h-[1px] 
+                [&::-webkit-scrollbar-track]:bg-gray-200 
+                [&::-webkit-scrollbar-thumb]:bg-gray-900">
+        
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+        
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+</div>
+    </div>
+</div>
+    <h2 class="text-sm md:text-base tracking-wider uppercase text-gray-800 font-medium mt-4">
+        What's Trending
+    </h2>
+</div>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         // We select the wrappers instead of just the videos so we can fade the whole slide
@@ -102,6 +140,16 @@
                 // 4. Play the next video
                 videos[nextIndex].play();
             });
+        });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const slider = document.getElementById('product-slider');
+        
+        slider.addEventListener('wheel', (evt) => {
+            // Prevent the page from scrolling down
+            evt.preventDefault();
+            // Translate the vertical mouse wheel movement to horizontal scrolling
+            slider.scrollLeft += evt.deltaY;
         });
     });
 </script>
