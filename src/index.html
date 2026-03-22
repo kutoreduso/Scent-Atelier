@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body class="">
+    <nav class="absolute flex flex-nowrap bg-transparent md:space-x-30 font-mono font-bold z-100 p-10">
+        <h1 class="font-bold">SCENT ATELIER</h1>
+        <a href="">Fragrances</a>
+        <a href="">About</a>
+  </nav>
+    <div class="md:w-full md:h-[600px] h-96 relative">
+        
+    <div id="video-carousel" class="flex w-full h-full overflow-hidden snap-x snap-mandatory scroll-smooth">
+        
+        <div class="snap-center shrink-0 w-full h-full relative">
+            <video class="carousel-video w-full h-full object-cover pointer-events-none -z-999" muted playsinline disablePictureInPicture>
+                <source src="../video/Althaïr Fragrance - An irresistible noble vanilla.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white pointer-events-none">
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2">Video 1</h2>
+            </div>
+        </div>
+
+        <div class="snap-center shrink-0 w-full h-full relative">
+            <video class="carousel-video w-full h-full object-cover pointer-events-none -z-999" muted playsinline disablePictureInPicture>
+                <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white pointer-events-none">
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2">Video 2</h2>
+            </div>
+        </div>
+
+        <div class="snap-center shrink-0 w-full h-full relative">
+            <video class="carousel-video w-full h-full object-cover pointer-events-none -z-999" muted playsinline disablePictureInPicture>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white pointer-events-none">
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2">Video 3</h2>
+            </div>
+        </div>
+
+    </div>
+</div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const videos = document.querySelectorAll('.carousel-video');
+        const carousel = document.getElementById('video-carousel');
+
+        if (videos.length === 0) return;
+
+        // Start the very first video
+        videos[0].play();
+
+        videos.forEach((video, index) => {
+            // Listen for when the video finishes playing
+            video.addEventListener('ended', () => {
+                
+                // Figure out the index of the next video (loops back to 0 if at the end)
+                const nextIndex = (index + 1) % videos.length;
+                
+                // Scroll the container to the next video
+                carousel.scrollTo({
+                    left: carousel.clientWidth * nextIndex,
+                    behavior: 'smooth'
+                });
+
+                // Reset the current video to the start (optional, but good practice)
+                video.currentTime = 0; 
+
+                // Play the next video
+                videos[nextIndex].play();
+            });
+        });
+    });
+</script>
+</body>
+</html>
