@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../dist/output.css" rel="stylesheet">
 </head>
-<body class="">
-    <div class="absolute flex flex-nowrap md:space-x-32  font-mono font-bold z-[100] p-10 text-white">
+
+<body class="font-inter">
+    <div class="absolute flex flex-nowrap md:space-x-32  font-bold z-[100] p-10 text-white">
     <h1 class="font-bold text-shadow-white ">SCENT ATELIER</h1>
     
     <a href="" class="hover:text-gray-300 transition-colors">Fragrances</a>
@@ -46,7 +47,65 @@
 
     </div>
 </div>
-  
+<div class="flex flex-col md:flex-row justify-between items-start gap-10 w-full ">
+
+    <div class="p-10 md:w-160 flex-shrink-0">
+        <h1 class="text-6xl font-bold uppercase mb-8">Latest Fragrances</h1>
+        <h3 class="text-5xl font-sans uppercase font-bold p-2">ARMAF</h3>
+        <h3 class="text-5xl font-sans uppercase font-bold p-2">AFNAN</h3>
+        <h3 class="text-5xl font-sans uppercase font-bold p-2">PARFUMS DE MARLY</h3>
+        <h3 class="text-5xl font-sans uppercase font-bold p-2">JEAN PAUL GAULTIER</h3>
+    </div>
+
+    <div class="w-full h-96 md:w-180 md:h-160 bg-gray-800 " href="">
+        <div class="items-center flex flex-col p-10 text-white">
+            <h1 class="pt-10 text-6xl font-bold uppercase">Spring Celebration</h1>
+            <h3 class="pt-15 text-4xl font-light">Huge Discount</h3>
+            <p class="pt-10 text-5xl font-light text-center uppercase">Take <span class="pt-2">20% OFF</span> your Favorite</p>
+            <p class="text-5xl font-light text-center uppercase ">Fragrances</p>
+            <h2 class="pt-20 text-4xl font-light uppercase">from selected items</h2>
+        </div>
+    </div>
+
+</div>
+<div class="p-10">
+    <h1 class="font-normal font-inter uppercase text-5xl text-black">Latest Deals</h1>
+
+
+    <div id="product-slider" 
+         class="flex flex-nowrap gap-8 overflow-x-auto pb-8 pt-5
+                [scrollbar-width:thin] 
+                [&::-webkit-scrollbar]:h-[1px] 
+                [&::-webkit-scrollbar-track]:bg-gray-200 
+                [&::-webkit-scrollbar-thumb]:bg-gray-900">
+        
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+        
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+        </div>
+</div>
+    </div>
+</div>
+    <h2 class="text-sm md:text-base tracking-wider uppercase text-gray-800 font-medium mt-4">
+        What's Trending
+    </h2>
+</div>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         // We select the wrappers instead of just the videos so we can fade the whole slide
@@ -80,6 +139,16 @@
                 // 4. Play the next video
                 videos[nextIndex].play();
             });
+        });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const slider = document.getElementById('product-slider');
+        
+        slider.addEventListener('wheel', (evt) => {
+            // Prevent the page from scrolling down
+            evt.preventDefault();
+            // Translate the vertical mouse wheel movement to horizontal scrolling
+            slider.scrollLeft += evt.deltaY;
         });
     });
 </script>
