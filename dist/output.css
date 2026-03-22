@@ -690,16 +690,6 @@
       width: calc(var(--spacing) * 100);
     }
   }
-  .md\:w-160 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 160);
-    }
-  }
-  .md\:w-180 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 180);
-    }
-  }
   .md\:w-full {
     @media (width >= 48rem) {
       width: 100%;
