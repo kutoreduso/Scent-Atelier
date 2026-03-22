@@ -6,72 +6,78 @@
   <link href="../dist/output.css" rel="stylesheet">
 </head>
 <body class="">
-    <nav class="absolute flex flex-nowrap bg-transparent md:space-x-30 font-mono font-bold z-100 p-10">
-        <h1 class="font-bold">SCENT ATELIER</h1>
-        <a href="">Fragrances</a>
-        <a href="">About</a>
-  </nav>
-    <div class="md:w-full md:h-[600px] h-96 relative">
+    <div class="absolute flex flex-nowrap md:space-x-32  font-mono font-bold z-[100] p-10 text-white">
+    <h1 class="font-bold text-shadow-white ">SCENT ATELIER</h1>
+    
+    <a href="" class="hover:text-gray-300 transition-colors">Fragrances</a>
+    <a href="" class="hover:text-gray-300 transition-colors">About</a>
+</div>
+
         
-    <div id="video-carousel" class="flex w-full h-full overflow-hidden snap-x snap-mandatory scroll-smooth">
+    <div class="md:w-full md:h-[680px] h-96 relative bg-black">
+    <div id="video-carousel" class="relative w-full h-full overflow-hidden">
         
-        <div class="snap-center shrink-0 w-full h-full relative">
-            <video class="carousel-video w-full h-full object-cover pointer-events-none -z-999" muted playsinline disablePictureInPicture>
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100 z-10">
+            <video class="w-full h-full object-cover pointer-events-none" muted playsinline disablePictureInPicture>
                 <source src="../video/Althaïr Fragrance - An irresistible noble vanilla.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white pointer-events-none">
-                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2">Video 1</h2>
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2"></h2>
             </div>
         </div>
 
-        <div class="snap-center shrink-0 w-full h-full relative">
-            <video class="carousel-video w-full h-full object-cover pointer-events-none -z-999" muted playsinline disablePictureInPicture>
-                <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+            <video class="w-full h-full object-cover pointer-events-none" muted playsinline disablePictureInPicture>
+                <source src="../video/Le Male Le Parfum  Jean Paul Gaultier - Jean Paul Gaultier (1080p, h264, youtube).mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white pointer-events-none">
-                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2">Video 2</h2>
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2"></h2>
             </div>
         </div>
 
-        <div class="snap-center shrink-0 w-full h-full relative">
-            <video class="carousel-video w-full h-full object-cover pointer-events-none -z-999" muted playsinline disablePictureInPicture>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 z-0">
+            <video class="w-full h-full object-cover pointer-events-none" muted playsinline disablePictureInPicture>
+                <source src="../video/Supremacy Collector's Edition by Afnan Perfumes - Afnan Perfumes (1080p, h264, youtube).mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white pointer-events-none">
-                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2">Video 3</h2>
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2"></h2>
             </div>
         </div>
 
     </div>
 </div>
   
-  <script>
+<script>
     document.addEventListener("DOMContentLoaded", () => {
-        const videos = document.querySelectorAll('.carousel-video');
-        const carousel = document.getElementById('video-carousel');
+        // We select the wrappers instead of just the videos so we can fade the whole slide
+        const slides = document.querySelectorAll('.carousel-slide');
+        if (slides.length === 0) return;
 
-        if (videos.length === 0) return;
+        // Grab all the actual <video> tags inside those slides
+        const videos = document.querySelectorAll('.carousel-slide video');
 
-        // Start the very first video
+        // Start the first video
         videos[0].play();
 
         videos.forEach((video, index) => {
             // Listen for when the video finishes playing
             video.addEventListener('ended', () => {
                 
-                // Figure out the index of the next video (loops back to 0 if at the end)
+                // Figure out the index of the next video
                 const nextIndex = (index + 1) % videos.length;
                 
-                // Scroll the container to the next video
-                carousel.scrollTo({
-                    left: carousel.clientWidth * nextIndex,
-                    behavior: 'smooth'
-                });
+                // 1. Fade OUT the current slide and push it to the back
+                slides[index].classList.remove('opacity-100', 'z-10');
+                slides[index].classList.add('opacity-0', 'z-0');
 
-                // Reset the current video to the start (optional, but good practice)
+                // 2. Fade IN the next slide and bring it to the front
+                slides[nextIndex].classList.remove('opacity-0', 'z-0');
+                slides[nextIndex].classList.add('opacity-100', 'z-10');
+
+                // 3. Reset the video that just finished so it's ready for next time
                 video.currentTime = 0; 
 
-                // Play the next video
+                // 4. Play the next video
                 videos[nextIndex].play();
             });
         });
