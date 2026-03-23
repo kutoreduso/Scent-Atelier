@@ -50,11 +50,11 @@
 <div class="flex flex-col md:flex-row justify-between items-start gap-10 w-full ">
 
     <div class="p-10 md:w-160 flex-shrink-0">
-        <h1 class="md:text-6xl text-3xl font-bold uppercase md:mb-8 mb-1">Latest Fragrances</h1>
-        <h3 class="md:text-5xl text-2xl font-sans uppercase font-bold md:p-2 p-1">ARMAF</h3>
-        <h3 class="md:text-5xl text-2xl font-sans uppercase font-bold md:p-2 p-1">AFNAN</h3>
-        <h3 class="md:text-5xl text-2xl font-sans uppercase font-bold md:p-2 p-1">PARFUMS DE MARLY</h3>
-        <h3 class="md:text-5xl text-2xl font-sans uppercase font-bold md:p-2 p-1">JEAN PAUL GAULTIER</h3>
+        <h1 class="md:text-6xl text-3xl font-inter font-bold uppercase md:mb-8 mb-1">Latest Fragrances</h1>
+        <h3 class="md:text-5xl text-2xl font-inter uppercase font-bold md:p-2 p-1">ARMAF</h3>
+        <h3 class="md:text-5xl text-2xl font-inter uppercase font-bold md:p-2 p-1">AFNAN</h3>
+        <h3 class="md:text-5xl text-2xl font-inter uppercase font-bold md:p-2 p-1">PARFUMS DE MARLY</h3>
+        <h3 class="md:text-5xl text-2xl font-inter uppercase font-bold md:p-2 p-1">JEAN PAUL GAULTIER</h3>
     </div>
 
     <div class="w-full h-96 md:w-180 md:h-160 bg-gray-800 cursor-pointer" href="">
@@ -144,10 +144,88 @@
 </div>
     </div>
 </div>
-    <h2 class="text-sm md:text-base tracking-wider uppercase text-gray-800 font-medium mt-4">
-        What's Trending
-    </h2>
+<div class="p-10">
+     <h1 class="font-normal font-inter uppercase text-5xl text-black pb-5">Whats'Trending</h1>
+    <div class="flex flex-nowrap space-x-6">
+         <div class="border-2 bg-black md:w-60 md:h-15 ">
+        <h1 class="text-white font-inter text-center justify-center flex flex-nowrap relative p-3 text-[20px] uppercase font-normal">Best Sellers</h1>
+     </div>
+     <div class="border-2 border-black md:w-60 md:h-15 ">
+        <h1 class="text-black font-inter text-center justify-center flex flex-nowrap relative p-3 text-[20px] uppercase font-normal">Latest pickup</h1>
+     </div>
+    </div>
+    <div id="product-slider" 
+         class="flex flex-nowrap gap-8 overflow-x-auto pb-8 pt-5
+                [scrollbar-width:thin] 
+                [&::-webkit-scrollbar]:h-[1px] 
+                [&::-webkit-scrollbar-track]:bg-gray-200 
+                [&::-webkit-scrollbar-thumb]:bg-gray-900">
+        
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer flex items-center justify-center">
+            <div class="flex flex-nowrap relative justify-center items-center  w-full md:w-70 aspect-square">
+        <img src="../prd/afnan/o.98689.jpg " class="object-cover w-full h-full">
+        <h1 class="item-center flex absolute pt-55 text-center font-light">AFNAN</h1>
+        <h1 class="item-center flex absolute pt-65 justify-center text-center md:w-80 font-light">SUPREMACY COLLECTOR’S EDITION</h1>
+        <h1 class="item-center flex absolute pt-78 justify-center text-center font-medium">$35.00</h1>
+    </div>
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer flex items-center justify-center">
+            <div class="flex flex-nowrap relative justify-center items-center w-full md:w-70 aspect-square">
+        <img src="../prd/jpg/jean-paul-gaultier-021208jg_03.webp" class="object-cover w-[200px] h-[200px]">
+         <h1 class="item-center flex absolute pt-55 text-center font-light uppercase">jean paul gaultier</h1>
+        <h1 class="item-center flex absolute pt-65 justify-center text-center md:w-80 font-light">Scandal Pour Homme Le Parfum</h1>
+        <h1 class="item-center flex absolute pt-78 justify-center text-center font-medium">$35.00</h1>
+    </div>
+        </div>
+
+        <div class="flex items-center justify-center shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer">
+    <div class="flex flex-nowrap relative justify-center items-center  w-full md:w-70 aspect-square">
+        <img src="../prd/jpg/375x500.81642.jpg" class="object-cover w-[130px] h-[230px]">
+         <h1 class="item-center flex absolute pt-60 text-center font-light uppercase">jean paul gaultier</h1>
+        <h1 class="item-center flex absolute pt-70 justify-center text-center md:w-80 font-light uppercase">la male elixir</h1>
+        <h1 class="item-center flex absolute pt-80 justify-center text-center font-medium">$35.00</h1>
+    </div>
 </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer flex items-center justify-center">
+            <div class="flex flex-nowrap relative justify-center items-center  w-full md:w-70 aspect-square">
+        <img src="../prd/creed/CreedAbsoluAventusEDPForMen75ml-2.webp" class="object-cover w-[130px] h-[230px]">
+         <h1 class="item-center flex absolute pt-60 text-center font-light">CREED</h1>
+        <h1 class="item-center flex absolute pt-70 justify-center text-center md:w-80 font-light">ABSOLU AVENTUS</h1>
+        <h1 class="item-center flex absolute pt-80 justify-center text-center font-medium">$35.00</h1>
+    </div>
+        </div>
+        
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer flex items-center justify-center">
+            <div class="flex flex-nowrap relative justify-center items-center w-full md:w-70 aspect-square">
+        <img src="../prd/armaf//22.png" class="object-cover w-85 h-85">
+         <h1 class="item-center flex absolute pt-60 text-center font-light">ARMAF</h1>
+        <h1 class="item-center flex absolute pt-70 justify-center text-center md:w-80 font-light">CLUB DE NUIT INTENSE MAN</h1>
+        <h1 class="item-center flex absolute pt-80 justify-center text-center font-medium">$35.00</h1>
+    </div>
+        </div>
+
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer flex items-center justify-center">
+            <div class="flex flex-nowrap relative justify-center items-center w-full md:w-70 aspect-square">
+        <img src="../prd/pdm/parfums-de-marly-023720pg_02.webp" class="object-cover w-55 h-55">
+         <h1 class="item-center flex absolute pt-60 text-center font-light">PARFUMS DE MARLY</h1>
+        <h1 class="item-center flex absolute pt-70 justify-center text-center md:w-80 font-light">ALTHIER</h1>
+        <h1 class="item-center flex absolute pt-80 justify-center text-center font-medium">$35.00</h1>
+    </div>
+        </div>
+        <div class="shrink-0 w-64 md:w-95 aspect-square border border-gray-800 relative group cursor-pointer flex items-center justify-center">
+            <div class="flex flex-nowrap relative justify-center items-center  w-full md:w-70 aspect-square">
+        <img src="../prd/mm/maison_margiela-_0017_2742222.webp" class="object-cover w-55 h-55">
+         <h1 class="item-center flex absolute pt-60 text-center font-light">MAISON MARGIELA</h1>
+        <h1 class="item-center flex absolute pt-70 justify-center text-center md:w-80 font-light">JAZZ CLUB</h1>
+        <h1 class="item-center flex absolute pt-80 justify-center text-center font-medium">$35.00</h1>
+    </div>
+        </div>
+</div>
+    </div>
+    </div>
+
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         // We select the wrappers instead of just the videos so we can fade the whole slide
