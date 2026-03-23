@@ -276,6 +276,9 @@
   .w-72 {
     width: calc(var(--spacing) * 72);
   }
+  .w-100 {
+    width: calc(var(--spacing) * 100);
+  }
   .w-full {
     width: 100%;
   }
@@ -362,6 +365,9 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-amber-500 {
+    border-color: var(--color-amber-500);
+  }
   .border-amber-800 {
     border-color: var(--color-amber-800);
   }
@@ -404,6 +410,9 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
@@ -436,6 +445,27 @@
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
+  }
+  .pt-55 {
+    padding-top: calc(var(--spacing) * 55);
+  }
+  .pt-60 {
+    padding-top: calc(var(--spacing) * 60);
+  }
+  .pt-65 {
+    padding-top: calc(var(--spacing) * 65);
+  }
+  .pt-70 {
+    padding-top: calc(var(--spacing) * 70);
+  }
+  .pt-75 {
+    padding-top: calc(var(--spacing) * 75);
+  }
+  .pt-78 {
+    padding-top: calc(var(--spacing) * 78);
+  }
+  .pt-80 {
+    padding-top: calc(var(--spacing) * 80);
   }
   .pt-120 {
     padding-top: calc(var(--spacing) * 120);
@@ -616,9 +646,6 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
-  .\[scrollbar-color\:\#1f2937_\#d1d5db\] {
-    scrollbar-color: #1f2937 #d1d5db;
-  }
   .\[scrollbar-width\:thin\] {
     scrollbar-width: thin;
   }
@@ -626,16 +653,6 @@
     --tw-text-shadow-color: #fff;
     @supports (color: color-mix(in lab, red, red)) {
       --tw-text-shadow-color: color-mix(in oklab, var(--color-white) var(--tw-text-shadow-alpha), transparent);
-    }
-  }
-  .group-hover\:scale-105 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        --tw-scale-x: 105%;
-        --tw-scale-y: 105%;
-        --tw-scale-z: 105%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
     }
   }
   .hover\:text-gray-300 {
@@ -655,14 +672,39 @@
       height: 680px;
     }
   }
+  .md\:w-20 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:w-40 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 40);
+    }
+  }
+  .md\:w-50 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 50);
+    }
+  }
+  .md\:w-60 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 60);
+    }
+  }
+  .md\:w-65 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 65);
+    }
+  }
+  .md\:w-70 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 70);
+    }
+  }
   .md\:w-80 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 80);
-    }
-  }
-  .md\:w-90 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 90);
     }
   }
   .md\:w-95 {
@@ -670,24 +712,19 @@
       width: calc(var(--spacing) * 95);
     }
   }
-  .md\:w-96 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 96);
-    }
-  }
-  .md\:w-97 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 97);
-    }
-  }
-  .md\:w-98 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 98);
-    }
-  }
   .md\:w-100 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 100);
+    }
+  }
+  .md\:w-160 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 160);
+    }
+  }
+  .md\:w-180 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 180);
     }
   }
   .md\:w-full {
@@ -721,29 +758,9 @@
       line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
-  .\[\&\:\:-webkit-scrollbar\]\:h-1\.5 {
-    &::-webkit-scrollbar {
-      height: calc(var(--spacing) * 1.5);
-    }
-  }
   .\[\&\:\:-webkit-scrollbar\]\:h-\[1px\] {
     &::-webkit-scrollbar {
       height: 1px;
-    }
-  }
-  .\[\&\:\:-webkit-scrollbar\]\:h-\[2px\] {
-    &::-webkit-scrollbar {
-      height: 2px;
-    }
-  }
-  .\[\&\:\:-webkit-scrollbar-thumb\]\:rounded-full {
-    &::-webkit-scrollbar-thumb {
-      border-radius: calc(infinity * 1px);
-    }
-  }
-  .\[\&\:\:-webkit-scrollbar-thumb\]\:bg-gray-800 {
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--color-gray-800);
     }
   }
   .\[\&\:\:-webkit-scrollbar-thumb\]\:bg-gray-900 {
@@ -754,11 +771,6 @@
   .\[\&\:\:-webkit-scrollbar-track\]\:bg-gray-200 {
     &::-webkit-scrollbar-track {
       background-color: var(--color-gray-200);
-    }
-  }
-  .\[\&\:\:-webkit-scrollbar-track\]\:bg-gray-300 {
-    &::-webkit-scrollbar-track {
-      background-color: var(--color-gray-300);
     }
   }
 }
@@ -855,21 +867,6 @@
   inherits: false;
   initial-value: 100%;
 }
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
 @property --tw-space-x-reverse {
   syntax: "*";
   inherits: false;
@@ -900,9 +897,6 @@
       --tw-ease: initial;
       --tw-text-shadow-color: initial;
       --tw-text-shadow-alpha: 100%;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
       --tw-space-x-reverse: 0;
     }
   }
