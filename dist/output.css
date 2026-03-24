@@ -392,9 +392,12 @@
   .w-110 {
     width: calc(var(--spacing) * 110);
   }
+<<<<<<< HEAD
   .w-120 {
     width: calc(var(--spacing) * 120);
   }
+=======
+>>>>>>> 1ef5fb8f8eff47387c2440f8b028bad04ff2f984
   .w-150 {
     width: calc(var(--spacing) * 150);
   }
@@ -826,6 +829,7 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
+<<<<<<< HEAD
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
@@ -836,12 +840,15 @@
   .text-\[15px\] {
     font-size: 15px;
   }
+=======
+>>>>>>> 1ef5fb8f8eff47387c2440f8b028bad04ff2f984
   .text-\[18px\] {
     font-size: 18px;
   }
   .text-\[20px\] {
     font-size: 20px;
   }
+<<<<<<< HEAD
   .text-\[25px\] {
     font-size: 25px;
   }
@@ -849,6 +856,8 @@
     --tw-leading: var(--leading-tight);
     line-height: var(--leading-tight);
   }
+=======
+>>>>>>> 1ef5fb8f8eff47387c2440f8b028bad04ff2f984
   .font-black {
     --tw-font-weight: var(--font-weight-black);
     font-weight: var(--font-weight-black);
@@ -1069,36 +1078,9 @@
       }
     }
   }
-  .focus\:ring-1 {
-    &:focus {
-      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-  }
-  .focus\:ring-white {
-    &:focus {
-      --tw-ring-color: var(--color-white);
-    }
-  }
-  .focus\:outline-none {
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
-    }
-  }
-  .sm\:w-80 {
-    @media (width >= 40rem) {
-      width: calc(var(--spacing) * 80);
-    }
-  }
   .md\:mb-8 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 8);
-    }
-  }
-  .md\:h-10 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 10);
     }
   }
   .md\:h-15 {
@@ -1106,6 +1088,7 @@
       height: calc(var(--spacing) * 15);
     }
   }
+<<<<<<< HEAD
   .md\:h-30 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 30);
@@ -1131,14 +1114,16 @@
       height: calc(var(--spacing) * 90);
     }
   }
+=======
+>>>>>>> 1ef5fb8f8eff47387c2440f8b028bad04ff2f984
   .md\:h-150 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 150);
     }
   }
-  .md\:h-160 {
+  .md\:mb-8 {
     @media (width >= 48rem) {
-      height: calc(var(--spacing) * 160);
+      margin-bottom: calc(var(--spacing) * 8);
     }
   }
   .md\:h-300 {
@@ -1151,6 +1136,7 @@
       height: 680px;
     }
   }
+<<<<<<< HEAD
   .md\:w-40 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 40);
@@ -1161,6 +1147,8 @@
       width: calc(var(--spacing) * 50);
     }
   }
+=======
+>>>>>>> 1ef5fb8f8eff47387c2440f8b028bad04ff2f984
   .md\:w-60 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 60);
@@ -1186,6 +1174,7 @@
       width: calc(var(--spacing) * 95);
     }
   }
+<<<<<<< HEAD
   .md\:w-96 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 96);
@@ -1196,6 +1185,8 @@
       width: calc(var(--spacing) * 100);
     }
   }
+=======
+>>>>>>> 1ef5fb8f8eff47387c2440f8b028bad04ff2f984
   .md\:w-160 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 160);
@@ -1230,6 +1221,7 @@
       padding: calc(var(--spacing) * 2);
     }
   }
+<<<<<<< HEAD
   .md\:px-10 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 10);
@@ -1240,6 +1232,8 @@
       padding-inline: calc(var(--spacing) * 16);
     }
   }
+=======
+>>>>>>> 1ef5fb8f8eff47387c2440f8b028bad04ff2f984
   .md\:pt-3 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 3);
@@ -1260,6 +1254,7 @@
       padding-top: calc(var(--spacing) * 20);
     }
   }
+<<<<<<< HEAD
   .md\:pt-25 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 25);
@@ -1290,6 +1285,8 @@
       padding-right: calc(var(--spacing) * 130);
     }
   }
+=======
+>>>>>>> 1ef5fb8f8eff47387c2440f8b028bad04ff2f984
   .md\:text-2xl {
     @media (width >= 48rem) {
       font-size: var(--text-2xl);
@@ -1314,6 +1311,7 @@
       line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
   }
+<<<<<<< HEAD
   .md\:text-\[20px\] {
     @media (width >= 48rem) {
       font-size: 20px;
@@ -1345,6 +1343,8 @@
       line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
   }
+=======
+>>>>>>> 1ef5fb8f8eff47387c2440f8b028bad04ff2f984
   .\[\&\:\:-webkit-scrollbar\]\:h-\[1px\] {
     &::-webkit-scrollbar {
       height: 1px;
