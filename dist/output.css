@@ -378,6 +378,9 @@
   .h-\[230px\] {
     height: 230px;
   }
+  .h-\[800px\] {
+    height: 800px;
+  }
   .h-full {
     height: 100%;
   }
