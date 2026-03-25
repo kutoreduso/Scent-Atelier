@@ -4,9 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../dist/output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="font-inter">
+    <div id="preloader" class="fixed inset-0 z-[999] flex items-center justify-center overflow-hidden pointer-events-auto">
+    
+    <div id="door-left" class="absolute top-0 left-0 w-1/2 h-full bg-black transition-transform duration-[1500ms] ease-[cubic-bezier(0.85,0,0.15,1)] origin-left"></div>
+    <div id="door-right" class="absolute top-0 right-0 w-1/2 h-full bg-black transition-transform duration-[1500ms] ease-[cubic-bezier(0.85,0,0.15,1)] origin-right"></div>
+
+    <div id="loader-text-wrapper" class="relative z-10 flex flex-col items-center justify-center pointer-events-none">
+        
+        <span id="loader-sub" class="text-gray-400 font-light tracking-[0.5em] text-xs uppercase mb-6 opacity-0 transition-opacity duration-1000">
+            Unveiling the essence
+        </span>
+        
+        <h1 id="loader-main" class="text-white text-4xl md:text-6xl font-bold font-inter tracking-[0.2em] uppercase opacity-0 blur-sm scale-95 transition-all duration-[2000ms] ease-out">
+            Scent Atelier
+        </h1>
+        
+    </div>
+
+</div>
     <div class="absolute top-0 left-0 w-full text-black font-sans z-[100] hover:bg-white transition-colors duration-300 hover:text-black text-white">
   
   <div class="flex items-center justify-between px-10 h-24">
@@ -488,6 +507,49 @@ and loud.</h2>
     <h1 class="font-inter text-[20px] font-thin text-white">2026 • SCENT ATELIER  </h1>
 </div>
 <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    // 1. Lock scrolling while loading
+    document.body.style.overflow = 'hidden';
+
+    const preloader = document.getElementById('preloader');
+    const doorLeft = document.getElementById('door-left');
+    const doorRight = document.getElementById('door-right');
+    const loaderSub = document.getElementById('loader-sub');
+    const loaderMain = document.getElementById('loader-main');
+    const textWrapper = document.getElementById('loader-text-wrapper');
+
+    // 2. The "Scent Diffusion" Effect (Mist clearing & Text appearing)
+    setTimeout(() => {
+        // Fade in the top text
+        loaderSub.classList.remove('opacity-0');
+        
+        // Remove blur, scale up to normal, and fade in the main text
+        loaderMain.classList.remove('opacity-0', 'blur-sm', 'scale-95');
+        loaderMain.classList.add('opacity-100', 'blur-none', 'scale-100');
+    }, 100);
+
+    // 3. The "Luxury Box Opening" Reveal
+    setTimeout(() => {
+        // First, fade out the text and blur it again like vapor disappearing
+        textWrapper.style.transition = 'opacity 0.8s ease, filter 0.8s ease';
+        textWrapper.style.opacity = '0';
+        textWrapper.style.filter = 'blur(10px)';
+        
+        // A split second later, slide the black doors open to the sides
+        setTimeout(() => {
+            doorLeft.style.transform = 'scaleX(0)';
+            doorRight.style.transform = 'scaleX(0)';
+            
+            // Unlock scrolling and completely remove the preloader from the code
+            setTimeout(() => {
+                document.body.style.overflow = '';
+                preloader.remove();
+            }, 1500); // Matches the door sliding duration
+            
+        }, 500); // Wait 0.5s after text starts fading before opening doors
+
+    }, 2800); // How long the logo stays on screen for them to read
+});
     document.addEventListener("DOMContentLoaded", () => {
         // We select the wrappers instead of just the videos so we can fade the whole slide
         const slides = document.querySelectorAll('.carousel-slide');

@@ -372,6 +372,9 @@
   .h-600 {
     height: calc(var(--spacing) * 600);
   }
+  .h-\[1px\] {
+    height: 1px;
+  }
   .h-\[200px\] {
     height: 200px;
   }
