@@ -252,6 +252,9 @@
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
+  .end {
+    inset-inline-end: var(--spacing);
+  }
   .-top-\[10\%\] {
     top: calc(10% * -1);
   }
