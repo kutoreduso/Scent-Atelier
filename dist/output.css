@@ -1295,6 +1295,16 @@
       height: 680px;
     }
   }
+  .md\:h-\[1000px\] {
+    @media (width >= 48rem) {
+      height: 1000px;
+    }
+  }
+  .md\:h-\[1100px\] {
+    @media (width >= 48rem) {
+      height: 1100px;
+    }
+  }
   .md\:h-full {
     @media (width >= 48rem) {
       height: 100%;
