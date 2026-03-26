@@ -66,12 +66,12 @@
   </div>
 </div>
         
-    <div class="md:w-full md:h-[680px] h-96 relative bg-black h-[800px]">
+    <div class="md:w-full md:h-[680px] h-96 relative bg-black h-[800px] overflow-hidden">
     <div id="video-carousel" class="relative w-full h-full overflow-hidden">
         
         <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100 z-10">
-            <video class="w-full h-full object-cover pointer-events-none" muted playsinline disablePictureInPicture>
-                <source src="../video/Althaïr-Fragrance-An-irresistible-noble-vanilla.mp4" type="video/mp4">
+            <video class="parallax-video relative w-full h-[120%] -top-[10%] object-cover pointer-events-none will-change-transform" muted playsinline disablePictureInPicture>
+                <source src="/video/althair-vanilla.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white pointer-events-none">
                 <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2"></h2>
@@ -79,8 +79,8 @@
         </div>
 
         <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 z-0">
-            <video class="w-full h-full object-cover pointer-events-none" muted playsinline disablePictureInPicture>
-                <source src="../video/Le-Male-Le-Parfum-Jean-Paul-Gaultier-Jean-Paul-Gaultier.mp4" type="video/mp4">
+            <video class="parallax-video relative w-full h-[120%] -top-[10%] object-cover pointer-events-none will-change-transform" muted playsinline disablePictureInPicture>
+                <source src="/video/le-male-parfum.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white pointer-events-none">
                 <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2"></h2>
@@ -88,8 +88,8 @@
         </div>
 
         <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 z-0">
-            <video class="w-full h-full object-cover pointer-events-none" muted playsinline disablePictureInPicture>
-                <source src="../video/Supremacy-Collector's-Edition-by-Afnan-Perfumes-Afnan-Perfumes.mp4" type="video/mp4">
+            <video class="parallax-video relative w-full h-[120%] -top-[10%] object-cover pointer-events-none will-change-transform" muted playsinline disablePictureInPicture>
+                <source src="/video/supremacy-afnan.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white pointer-events-none">
                 <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-2"></h2>
@@ -507,6 +507,28 @@ and loud.</h2>
     <h1 class="font-inter text-[20px] font-thin text-white">2026 • SCENT ATELIER  </h1>
 </div>
 <script>
+    window.addEventListener('scroll', function() {
+    const container = document.getElementById('video-carousel');
+    const videos = document.querySelectorAll('.parallax-video');
+    
+    const rect = container.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Only run when the carousel is visible on screen
+    if (rect.top < windowHeight && rect.bottom > 0) {
+      // Calculate scroll progress (percentage of how far the element is through the view)
+      const scrollOffset = window.scrollY + (windowHeight / 2);
+      const elementOffset = container.offsetTop + (container.offsetHeight / 2);
+      const diff = scrollOffset - elementOffset;
+      
+      // Adjust the 0.15 multiplier to increase or decrease the parallax "speed"
+      const translateY = diff * 0.15;
+
+      videos.forEach(video => {
+        video.style.transform = `translateY(${translateY}px)`;
+      });
+    }
+  });
     document.addEventListener("DOMContentLoaded", () => {
     // 1. Lock scrolling while loading
     document.body.style.overflow = 'hidden';
