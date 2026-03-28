@@ -26,10 +26,12 @@
     </div>
 
 </div>
-    <div class="absolute top-0 left-0 w-full font-inter z-[100] hover:bg-white transition-colors duration-300 hover:text-black text-black">
-  
-  <div class="flex items-center justify-between px-10 h-24">
+    <div class="absolute top-0 left-0 w-full text-white font-inter z-[200] group transition-colors duration-300">
+  <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:block hidden -z-10"></div>
+
+  <div class="flex items-center justify-between px-6 md:px-10 h-24 relative z-50 text-black">
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div class="flex-1 flex items-center">
       <span class="font-bold text-sm uppercase">SCENT ATELIER</span>
@@ -45,13 +47,19 @@
     <div class="flex-1 flex justify-center items-center space-x-16 h-full">
       
       <div class="group flex items-center h-full">
+=======
+    <div class="flex-1 flex items-center cursor-pointer">
+      <a class="font-bold text-sm uppercase transition-colors duration-300" href="index.html" id="nav-logo">SCENT ATELIER</a>
+    </div>
+
+    <div class="hidden md:flex flex-1 justify-center items-center space-x-16 h-full">
+      <div class="dropdown-group flex items-center h-full">
+>>>>>>> feature/stores-sections
         <span class="font-bold text-sm cursor-pointer">Fragrances</span>
         
-        <div class="absolute left-0 top-full w-full bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg border-t border-gray-100">
-          
+        <div class="absolute left-0 top-full w-full bg-white text-black opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg border-t border-gray-100">
           <div class="flex justify-center items-start gap-24 py-10">
             <a href="#" class="font-bold text-sm hover:text-gray-500">Men</a>
-
             <div class="flex flex-col font-bold">
               <span class="text-sm mb-3">Collection</span>
               <a href="#" class="text-xs mb-2 hover:text-gray-500">AFNAN</a>
@@ -59,28 +67,59 @@
               <a href="#" class="text-xs mb-2 hover:text-gray-500">INITIO</a>
               <a href="#" class="text-xs hover:text-gray-500">PARFUMS DE MARLEY</a>
             </div>
-
             <a href="#" class="font-bold text-sm hover:text-gray-500">Women</a>
           </div>
-          
         </div>
       </div>
-
-      <a href="#" class="font-bold text-sm cursor-pointer flex items-center h-full">About</a>
+      <a href="about.html" class="font-bold text-sm cursor-pointer flex items-center h-full">About</a>
     </div>
 
-    <div class="flex-1"></div>
+    <div class="flex-1 flex justify-end md:hidden">
+      <button id="mobile-menu-btn" class="flex flex-col justify-center items-end w-10 h-10 gap-2 focus:outline-none z-[201] mix-blend-difference text-black">
+        <span class="w-8 h-[1px] bg-current transition-transform duration-500 ease-in-out origin-center"></span>
+        <span class="w-8 h-[1px] bg-current transition-transform duration-500 ease-in-out origin-center"></span>
+      </button>
+    </div>
 
+    <div class="hidden md:flex flex-1"></div>
   </div>
 </div>
 
-<div class="item item-center flex-col justify-center flex flex-nowrap md:pt-60 relative">
-    <h1 class="text-center md:text-6xl font-inter font-bold">
+<div id="premium-mobile-menu" class="fixed inset-0 bg-[#0a0a0a] text-white z-[150] flex flex-col justify-center px-10 opacity-0 pointer-events-none transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] translate-y-[-100%]">
+    
+    <ul class="flex flex-col space-y-6 mt-10">
+        <li class="overflow-hidden">
+            <a href="#" class="mobile-link block text-5xl font-light uppercase tracking-widest translate-y-[100%] transition-transform duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] hover:text-gray-400">Men</a>
+        </li>
+        <li class="overflow-hidden">
+            <a href="#" class="mobile-link block text-5xl font-light uppercase tracking-widest translate-y-[100%] transition-transform duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] hover:text-gray-400 delay-100">Women</a>
+        </li>
+        <li class="overflow-hidden">
+            <a href="#" class="mobile-link block text-5xl font-light uppercase tracking-widest translate-y-[100%] transition-transform duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] hover:text-gray-400 delay-200">Collections</a>
+        </li>
+        <li class="overflow-hidden">
+            <a href="about.html" class="mobile-link block text-5xl font-light uppercase tracking-widest translate-y-[100%] transition-transform duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] hover:text-gray-400 delay-300">About</a>
+        </li>
+    </ul>
+
+    <div class="absolute bottom-10 left-10 right-10 flex justify-between items-end border-t border-white/20 pt-6 opacity-0 transition-opacity duration-1000 delay-500" id="mobile-menu-footer">
+        <div class="text-xs tracking-widest uppercase font-light text-gray-400">
+            Scent Atelier © 2026
+        </div>
+        <div class="flex gap-4 text-xs font-light">
+            <a href="#" class="hover:text-gray-400 transition-colors">IG</a>
+            <a href="#" class="hover:text-gray-400 transition-colors">FB</a>
+        </div>
+    </div>
+</div>
+
+<div class="item item-center flex-col justify-center flex flex-nowrap md:pt-60 pt-30 relative">
+    <h1 class="text-center md:text-6xl font-inter font-bold text-2xl">
         SCENT ATELIER TEAM
     </h1>
-    <h3 class="text-center md:text-3xl uppercase font-light font-inter">About Us</h3>
+    <h3 class="text-center md:text-3xl uppercase font-light font-inter ">About Us</h3>
 </div>
-<div class="md:p-10 flex-col justify-center text-justify items-center flex flex-nowrap relative">
+<div class="md:text-[] md:p-10 p-5 flex-col justify-center text-justify items-center flex flex-nowrap relative">
     <p class="container ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut metus non lacus placerat convallis. 
         Donec a maximus odio. Fusce non turpis in nisi volutpat ultricies. Nunc vitae aliquet mi. Fusce facilisis dui quis elementum luctus. 
@@ -223,6 +262,66 @@ Duis congue ante quis augue placerat, sit amet consequat tellus malesuada.
         }, 500); // Wait 0.5s after text starts fading before opening doors
 
     }, 2800); // How long the logo stays on screen for them to read
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuOverlay = document.getElementById('premium-mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const menuFooter = document.getElementById('mobile-menu-footer');
+    const lines = menuBtn.querySelectorAll('span');
+    
+    let isMenuOpen = false;
+
+    menuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+            // -- ADD THESE TWO LINES --
+            // Change button color to white so it's visible on the dark overlay
+            menuBtn.classList.remove('text-black');
+            menuBtn.classList.add('text-white');
+
+            // 1. Lock body scroll
+            document.body.style.overflow = 'hidden';
+            
+            // 2. Slide overlay down
+            menuOverlay.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-[-100%]');
+            menuOverlay.classList.add('opacity-100', 'translate-y-0');
+
+            // 3. Animate Hamburger to 'X'
+            lines[0].style.transform = 'translateY(4.5px) rotate(45deg)';
+            lines[1].style.transform = 'translateY(-4.5px) rotate(-45deg)';
+
+            // 4. Stagger reveal the links
+            setTimeout(() => {
+                mobileLinks.forEach(link => link.classList.remove('translate-y-[100%]'));
+                menuFooter.classList.remove('opacity-0');
+            }, 300);
+
+        } else {
+            // -- ADD THESE TWO LINES --
+            // Change button color back to black for the white background
+            menuBtn.classList.remove('text-white');
+            menuBtn.classList.add('text-black');
+
+            // 1. Unlock body scroll
+            document.body.style.overflow = '';
+
+            // 2. Hide links immediately for clean exit
+            mobileLinks.forEach(link => link.classList.add('translate-y-[100%]'));
+            menuFooter.classList.add('opacity-0');
+
+            // 3. Animate 'X' back to Hamburger
+            lines[0].style.transform = 'none';
+            lines[1].style.transform = 'none';
+
+            // 4. Slide overlay back up
+            setTimeout(() => {
+                menuOverlay.classList.remove('opacity-100', 'translate-y-0');
+                menuOverlay.classList.add('opacity-0', 'pointer-events-none', 'translate-y-[-100%]');
+            }, 200); 
+        }
+    });
 });
     </script>
 </body>
