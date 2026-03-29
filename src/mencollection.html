@@ -133,7 +133,7 @@ masterpieces and modern powerhouses.</h3>
     </div>
 </div>
 
-<div id="automatic-carousel" class="relative w-full h-[500px] md:h-[720px] bg-black overflow-hidden">
+<div id="automatic-carousel" class="relative w-full h-[500px] md:h-[600px] bg-black overflow-hidden">
     
     <img src="/prd/valentino/valentino-bg.jpg" class="auto-photo absolute inset-0 w-full h-full object-cover transition-opacity duration-5000 ease-in-out opacity-100 z-10" alt="Fragrance 1">
     
@@ -145,10 +145,95 @@ masterpieces and modern powerhouses.</h3>
 
 </div>
 
-<div class="">
-
-
+<div class="font-inter pl-5 pt-5 flex flex-row items-center gap-4">
+    
+    <div class="relative border border-gray-300 md:w-80 shrink-0">
+        
+        <select class="w-full p-5 uppercase appearance-none bg-transparent outline-none cursor-pointer pr-12 text-sm font-bold tracking-widest text-black">
+            
+            <option value="" disabled selected hidden>Sort By</option>
+            
+            <option value="feature">Feature</option>
+            <option value="best-selling">Best Selling</option>
+            <option value="a-z">Alphabetical A - Z</option>
+            <option value="z-a">Alphabetical Z - A</option>
+            <option value="low-high">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+            
+        </select>
+        
+        <div class="absolute inset-y-0 right-0 flex items-center pr-5 pointer-events-none">
+            <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        
+    </div>
+    <div class="">
+    <h1 class="flex relative font-light uppercase"> 0 Product</h1>
 </div>
+</div>
+
+<div class="p-5 flex flex-col sticky font-inter w-full md:w-auto">
+
+    <input type="checkbox" id="mobile-filter-toggle" class="sr-only peer">
+
+    <label for="mobile-filter-toggle" class="md:hidden flex justify-between items-center w-full border border-gray-300 px-5 py-3 uppercase text-sm font-bold tracking-widest cursor-pointer select-none">
+        <span>Filter By</span>
+        <svg class="w-4 h-4 text-black transition-transform duration-300 peer-checked:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </label>
+
+    <div class="hidden peer-checked:flex md:flex border-x border-b md:border-t border-gray-300 p-6 md:p-10 md:w-80 flex-col flex-nowrap">
+        
+        <h1 class="uppercase pb-2 font-light tracking-widest text-sm">Availability</h1>
+        
+        <label class="flex items-center gap-3 cursor-pointer mb-5">
+            <div class="relative w-11 h-6">
+                <input type="checkbox" class="sr-only peer">
+                <div class="absolute inset-0 bg-gray-300 rounded-full transition-colors duration-300 ease-in-out peer-checked:bg-black"></div>
+                <div class="absolute top-[2px] left-[2px] bg-white w-5 h-5 rounded-full shadow-sm transition-transform duration-300 ease-in-out peer-checked:translate-x-5"></div>
+            </div>
+            
+            <span class="text-gray-500 font-inter text-sm md:text-base font-light select-none">
+                In stock only
+            </span>
+        </label>
+
+        <div class="flex flex-col gap-3 font-inter mt-6">
+            <h1 class="uppercase text-sm font-light tracking-widest text-black">Price Range</h1>
+            
+            <div class="flex items-center gap-3">
+                <div class="relative flex-1">
+                    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm pointer-events-none">$</span>
+                    
+                    <input 
+                        type="text" 
+                        inputmode="numeric" 
+                        placeholder="Min" 
+                        class="w-full border border-gray-300 pl-7 pr-3 py-2.5 text-sm bg-white text-black placeholder-gray-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all duration-300"
+                    >
+                </div>
+                
+                <span class="text-gray-400 font-light">-</span>
+                
+                <div class="relative flex-1">
+                    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm pointer-events-none">$</span>
+                    
+                    <input 
+                        type="text" 
+                        inputmode="numeric" 
+                        placeholder="Max" 
+                        class="w-full border border-gray-300 pl-7 pr-3 py-2.5 text-sm bg-white text-black placeholder-gray-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all duration-300"
+                    >
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
 <!-- <div class="bg-black w-full p-10 ">
     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 w-full font-inter pt-20">
         
